@@ -1,0 +1,362 @@
+ "Layer 0": {
+    "Expert 0": {
+      "hits": 17990,
+      "top_tokens": [
+        {
+          "token": "?",
+          "count": 5827
+        },
+        {
+          "token": "▁the",
+          "count": 4092
+        },
+        {
+          "token": "▁is",
+          "count": 3817
+        },
+        {
+          "token": "What",
+          "count": 1411
+        },
+        {
+          "token": "ich",
+          "count": 194
+        },
+        {
+          "token": "▁holding",
+          "count": 173
+        },
+        {
+          "token": "▁object",
+          "count": 107
+        },
+        {
+          "token": "▁sh",
+          "count": 86
+        },
+        {
+          "token": "▁behind",
+          "count": 81
+        },
+        {
+          "token": "▁name",
+          "count": 81
+        }
+      ]
+    },
+    "Expert 1": {
+      "hits": 37833,
+      "top_tokens": [
+        {
+          "token": "What",
+          "count": 5841
+        },
+        {
+          "token": "▁is",
+          "count": 2734
+        },
+        {
+          "token": "▁the",
+          "count": 2425
+        },
+        {
+          "token": "▁on",
+          "count": 1811
+        },
+        {
+          "token": "▁of",
+          "count": 1065
+        },
+        {
+          "token": "▁in",
+          "count": 1007
+        },
+        {
+          "token": "▁this",
+          "count": 833
+        },
+        {
+          "token": "?",
+          "count": 633
+        },
+        {
+          "token": "▁to",
+          "count": 385
+        },
+        {
+          "token": "▁does",
+          "count": 384
+        }
+      ]
+    },
+    "Expert 2": {
+      "hits": 97408,
+      "top_tokens": [
+        {
+          "token": "?",
+          "count": 12335
+        },
+        {
+          "token": "What",
+          "count": 11682
+        },
+        {
+          "token": "▁the",
+          "count": 10910
+        },
+        {
+          "token": "▁is",
+          "count": 6838
+        },
+        {
+          "token": "▁are",
+          "count": 2132
+        },
+        {
+          "token": "▁of",
+          "count": 2067
+        },
+        {
+          "token": "▁in",
+          "count": 2040
+        },
+        {
+          "token": "▁on",
+          "count": 1948
+        },
+        {
+          "token": "▁this",
+          "count": 1654
+        },
+        {
+          "token": "▁to",
+          "count": 773
+        }
+      ]
+    },
+    "Expert 3": {
+      "hits": 791,
+      "top_tokens": [
+        {
+          "token": "▁doing",
+          "count": 260
+        },
+        {
+          "token": "▁be",
+          "count": 66
+        },
+        {
+          "token": "▁picture",
+          "count": 65
+        },
+        {
+          "token": "▁written",
+          "count": 45
+        },
+        {
+          "token": "▁above",
+          "count": 40
+        },
+        {
+          "token": "▁say",
+          "count": 39
+        },
+        {
+          "token": "▁fruit",
+          "count": 36
+        },
+        {
+          "token": "▁these",
+          "count": 30
+        },
+        {
+          "token": "▁lady",
+          "count": 28
+        },
+        {
+          "token": "▁left",
+          "count": 23
+        }
+      ]
+    },
+    "Expert 4": {
+      "hits": 52440,
+      "top_tokens": [
+        {
+          "token": "?",
+          "count": 6265
+        },
+        {
+          "token": "What",
+          "count": 5841
+        },
+        {
+          "token": "▁the",
+          "count": 5724
+        },
+        {
+          "token": "▁is",
+          "count": 4463
+        },
+        {
+          "token": "▁are",
+          "count": 2132
+        },
+        {
+          "token": "▁on",
+          "count": 1555
+        },
+        {
+          "token": "▁in",
+          "count": 1033
+        },
+        {
+          "token": "▁of",
+          "count": 854
+        },
+        {
+          "token": "▁this",
+          "count": 828
+        },
+        {
+          "token": "▁does",
+          "count": 384
+        }
+      ]
+    },
+    "Expert 5": {
+      "hits": 51558,
+      "top_tokens": [
+        {
+          "token": "?",
+          "count": 6265
+        },
+        {
+          "token": "What",
+          "count": 5841
+        },
+        {
+          "token": "▁the",
+          "count": 5726
+        },
+        {
+          "token": "▁is",
+          "count": 4463
+        },
+        {
+          "token": "▁on",
+          "count": 1555
+        },
+        {
+          "token": "▁are",
+          "count": 1066
+        },
+        {
+          "token": "▁of",
+          "count": 1044
+        },
+        {
+          "token": "▁in",
+          "count": 1020
+        },
+        {
+          "token": "▁this",
+          "count": 828
+        },
+        {
+          "token": "▁to",
+          "count": 385
+        }
+      ]
+    },
+    "Expert 6": {
+      "hits": 3505,
+      "top_tokens": [
+        {
+          "token": "▁on",
+          "count": 949
+        },
+        {
+          "token": "Wh",
+          "count": 292
+        },
+        {
+          "token": "▁sign",
+          "count": 280
+        },
+        {
+          "token": "▁made",
+          "count": 193
+        },
+        {
+          "token": "▁does",
+          "count": 189
+        },
+        {
+          "token": "▁colors",
+          "count": 105
+        },
+        {
+          "token": "▁number",
+          "count": 89
+        },
+        {
+          "token": "aring",
+          "count": 78
+        },
+        {
+          "token": "▁color",
+          "count": 76
+        },
+        {
+          "token": "ating",
+          "count": 54
+        }
+      ]
+    },
+    "Expert 7": {
+      "hits": 46557,
+      "top_tokens": [
+        {
+          "token": "?",
+          "count": 6265
+        },
+        {
+          "token": "▁the",
+          "count": 5767
+        },
+        {
+          "token": "▁is",
+          "count": 4463
+        },
+        {
+          "token": "What",
+          "count": 4430
+        },
+        {
+          "token": "▁on",
+          "count": 1511
+        },
+        {
+          "token": "▁of",
+          "count": 1234
+        },
+        {
+          "token": "▁are",
+          "count": 1066
+        },
+        {
+          "token": "▁in",
+          "count": 1020
+        },
+        {
+          "token": "▁this",
+          "count": 825
+        },
+        {
+          "token": "▁man",
+          "count": 463
+        }
+      ]
+    }
+  },

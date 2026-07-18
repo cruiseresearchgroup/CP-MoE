@@ -1,0 +1,92 @@
+*.pt
+*.pth
+*.bin
+checkpoints/
+logs/
+outputs/
+# HuggingFace transformers
+pytorch_model*.bin
+tf_model*.h5
+flax_model.msgpack
+rust_model.ot
+
+# LoRA / Adapter weights
+*.safetensors
+adapter_config.json
+adapter_model.*
+
+# Distributed training optimizer states
+*.opt
+*.os
+*.state
+
+# Checkpoints / output dirs
+checkpoints/
+outputs/
+results/
+runs/
+
+# TensorBoard / wandb
+events.out.tfevents.*
+wandb/
+
+# Deepspeed / vLLM / Ray logs
+ds_logs/
+logs/
+ray_results/
+mlruns/
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+build/
+dist/
+.cache/
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+.history/
+*.png
+*.OU
+*.o*
+# JetBrains
+.idea/
+
+# Environment dumps
+.env
+*.swp
+*.swo
+vis_masks/
+
+# Experiment output dirs (variant-named checkpoints/results/stats)
+checkpoints_*/
+results_*/
+expert_statics_output*/
+
+# Papers / misc docs
+*.pdf
+
+# Experiment scaffolding scripts (multi-seed / warmup / tsne sweeps)
+scripts/LoraMoE/Eval_NI/Eval_all_cka0_seed_final.sh
+scripts/LoraMoE/Eval_NI/Eval_all_cka0_seed_immediate.sh
+scripts/LoraMoE/Eval_NI/Eval_all_multi_warmup.sh
+scripts/LoraMoE/Eval_NI/Eval_all_multi_warmup_final.sh
+scripts/LoraMoE/Eval_NI/Eval_all_multiseed.sh
+scripts/LoraMoE/Eval_NI/Eval_all_multiseed_final.sh
+scripts/LoraMoE/Eval_NI/Eval_all_nomask_seed_final.sh
+scripts/LoraMoE/Eval_NI/Eval_all_nomask_seed_immediate.sh
+scripts/LoraMoE/Eval_NI/Eval_all_wt0_seed_final.sh
+scripts/LoraMoE/Eval_NI/Eval_all_wt0_seed_immediate.sh
+scripts/LoraMoE/Train_NI/train_cka0_multiseed.sh
+scripts/LoraMoE/Train_NI/train_multi_warmup.sh
+scripts/LoraMoE/Train_NI/train_multiseed.sh
+scripts/LoraMoE/Train_NI/train_nomask_multiseed.sh
+scripts/analyze_expert_tsne.py
+scripts/analyze_ffn_activation_tsne.py
+scripts/common_paths.sh
+scripts/run_tsne_seed50.sh
+sne.sh
