@@ -102,3 +102,17 @@ Released under the [MIT License](LICENSE).
 ## Acknowledgement
 
 Built on [LLaVA](https://github.com/haotian-liu/LLaVA) and [CL-MoE](https://github.com/ECNU-ICALK/CL-MoE).
+
+## Citation
+
+> [!IMPORTANT]
+> If this repository is useful for your work, please cite our paper:
+>
+> ```LaTeX
+> @inproceedings{liu2026cpmoe,
+>   title={CP-MoE: Consistency-Preserving Mixture-of-Experts for Continual Learning},
+>   author={Liu, Yang and Nguyen, Toan and Salim, Flora D.},
+>   booktitle={Conference on Lifelong Learning Agents (CoLLAs)},
+>   year={2026}
+> }
+> ```
