@@ -1,10 +1,17 @@
 # CP-MoE: Consistency-Preserving Mixture-of-Experts
 
-CP-MoE is a continual-learning framework for the sequential fine-tuning of large foundation models with LoRA-based Mixture-of-Experts, designed to mitigate catastrophic forgetting.
+CP-MoE is a post-training framework for continually fine-tuning large foundation models on a sequence of tasks without catastrophic forgetting. The foundation model stays frozen; CP-MoE governs how LoRA-based experts are updated and routed as new tasks arrive.
 
-When LLMs and vision-language models adapt to a stream of tasks with LoRA-MoE, two failure modes arise: **aggressive isolation** (restricting experts too strictly blocks reuse of previously learned knowledge on similar new tasks) and **aggressive merging** (overwriting existing parameters with new-task updates erases past tasks). CP-MoE resolves this trade-off by first probing each new task with a temporary expert, then using what it learns to guide how the stable experts are routed and updated.
+## The Core Problem
+
+When large language models (LLMs) and vision-language models (VLMs) adapt to new tasks sequentially, parameter-efficient fine-tuning with LoRA is the standard choice. But efficiency does not prevent forgetting: each new task still tends to overwrite what the model already knew. Low-Rank Adaptation Mixture-of-Experts (LoRA-MoE) is a more natural fit for this setting, since a partitioned parameter space gives some isolation for free. Yet two of its default mechanisms work against continual learning:
+
+- **Load balancing fights task placement.** Balancing objectives force experts to share tokens evenly. This is what prevents expert collapse in pretraining, but in continual learning the same pressure keeps pushing new tasks into experts that already hold old knowledge.
+- **Updates are blind to what matters.** Stable experts are updated directly from the current task's gradients, with no notion of which parameters carry knowledge worth keeping.
 
 ## Method
+
+CP-MoE addresses both issues by first probing each new task with a temporary expert, then using what it learns to guide how the stable experts are routed and updated:
 
 - **Transient Expert** — a temporary expert module that captures early, task-specific updates during the initial phase of a new task and is discarded afterwards.
 - **Consistency-Preserving Routing Bias** — the transient expert is used to measure representation similarity between the new data and the existing stable experts, steering routing toward the most compatible stable experts.
