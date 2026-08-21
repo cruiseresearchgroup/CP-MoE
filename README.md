@@ -1,6 +1,24 @@
-# CP-MoE
+# CP-MoE: Consistency-Preserving Mixture-of-Experts
 
-Consistency-Preserving Mixture-of-Experts (LoRA-MoE) for continual instruction tuning, built on LLaVA / CL-MoE.
+CP-MoE is a continual-learning framework for the sequential fine-tuning of large foundation models with LoRA-based Mixture-of-Experts, designed to mitigate catastrophic forgetting.
+
+When LLMs and vision-language models adapt to a stream of tasks with LoRA-MoE, two failure modes arise: **aggressive isolation** (restricting experts too strictly blocks reuse of previously learned knowledge on similar new tasks) and **aggressive merging** (overwriting existing parameters with new-task updates erases past tasks). CP-MoE resolves this trade-off by first probing each new task with a temporary expert, then using what it learns to guide how the stable experts are routed and updated.
+
+## Method
+
+- **Transient Expert** — a temporary expert module that captures early, task-specific updates during the initial phase of a new task and is discarded afterwards.
+- **Consistency-Preserving Routing Bias** — the transient expert is used to measure representation similarity between the new data and the existing stable experts, steering routing toward the most compatible stable experts.
+- **Transient Expert-Guided Regularisation** — when the stable experts are updated, the mechanism identifies which historical parameters are most critical and applies targeted regularisation to shield them from being overwritten.
+
+## Results
+
+Evaluated on frozen 7B backbones (Llama-2-7B for language, LLaVA-1.5-7B for vision-language), training only the LoRA experts and router (1.48% of parameters on SuperNI, 0.47% on VQA v2):
+
+| Benchmark | Setting | CP-MoE | Strongest baseline |
+| --- | --- | --- | --- |
+| SuperNI | 8 sequential language tasks | **50.84%** avg / **0.62%** forgetting | — |
+| SuperNI | zero-shot transfer, 7 unseen tasks | **35.80%** | 33.80% (GainLoRA) |
+| VQA v2 | 10 sequential visual-reasoning tasks | **62.30%** avg / **0.35%** forgetting | 60.77% / 1.77% (CL-MoE) |
 
 ## Install
 
@@ -63,6 +81,10 @@ bash scripts/LoraMoE/Eval_NI/Eval_all.sh
 Each script runs multi-GPU inference (uses `CUDA_VISIBLE_DEVICES`), merges the
 shards, and scores with `llava/eval/CLMoE/eval_superni.py`. Results and the
 `accuracy_result.txt` land in `./results/CLMoE/<task>/<stage>/`.
+
+## License
+
+Released under the [MIT License](LICENSE).
 
 ## Acknowledgement
 
