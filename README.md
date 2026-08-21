@@ -16,7 +16,7 @@ Evaluated on frozen 7B backbones (Llama-2-7B for language, LLaVA-1.5-7B for visi
 
 | Benchmark | Setting | CP-MoE | Strongest baseline |
 | --- | --- | --- | --- |
-| SuperNI | 8 sequential language tasks | **50.84%** avg / **1.32%** forgetting | 51.54% |
+| SuperNI | 8 sequential language tasks | **50.84%** avg / **1.32%** forgetting | 51.54% (GainLoRA) |
 | SuperNI | zero-shot transfer, 7 unseen tasks | **35.80%** | 33.80% (GainLoRA) |
 | VQA v2 | 10 sequential visual-reasoning tasks | **62.30%** avg / **0.35%** forgetting | 60.77% / 1.77% (CL-MoE) |
 
