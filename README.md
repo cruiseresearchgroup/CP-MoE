@@ -1,5 +1,7 @@
 # CP-MoE: Consistency-Preserving Mixture-of-Experts
 
+**Published at the 5th Conference on Lifelong Learning Agents (CoLLAs), 2026.**
+
 CP-MoE is a post-training framework for continually fine-tuning large foundation models on a sequence of tasks without catastrophic forgetting. The foundation model stays frozen; CP-MoE governs how LoRA-based experts are updated and routed as new tasks arrive.
 
 ## The Core Problem
@@ -12,6 +14,10 @@ When large language models (LLMs) and vision-language models (VLMs) adapt to new
 ## Method
 
 CP-MoE addresses both issues by first probing each new task with a temporary expert, then using what it learns to guide how the stable experts are routed and updated:
+
+![Overview of the CP-MoE framework](assets/cpmoe_overview.png)
+
+*Overview of CP-MoE. (Left) A task-specific transient expert is optimised on warm-up tokens to derive the prospective importance mask Ω<sub>t</sub>. (Middle) CKA between the transient expert and each stable expert produces representation-consistency scores h<sub>i</sub><sup>CP</sup>, injected as a routing bias so load-balancing pressure does not override expert specialisation. (Right) After training, Ω<sub>t</sub> is accumulated into each expert's importance matrix, weighted by h<sub>i</sub><sup>CP</sup>, so experts aligned with the current task receive prioritised parameter protection.*
 
 - **Transient Expert** — a temporary expert module that captures early, task-specific updates during the initial phase of a new task and is discarded afterwards.
 - **Consistency-Preserving Routing Bias** — the transient expert is used to measure representation similarity between the new data and the existing stable experts, steering routing toward the most compatible stable experts.

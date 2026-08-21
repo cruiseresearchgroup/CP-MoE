@@ -51,6 +51,7 @@ dist/
 .vscode/
 .history/
 *.png
+!assets/*.png
 *.OU
 *.o*
 # JetBrains
